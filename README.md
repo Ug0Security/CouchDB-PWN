@@ -1,2 +1,2 @@
 # CouchDB-PWN
-python3 CheckCouchDB.py sitelist > results ; python3 CouchDBList.py results > list_dbs
+python3 CheckCouchDB.py sitelist > checked ; python3 CouchDBList.py listed > list_dbs ; python3 CouchDBAccess.py listed > results
