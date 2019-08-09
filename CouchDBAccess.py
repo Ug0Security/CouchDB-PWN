@@ -76,10 +76,10 @@ async def gethead(site, session, start_time, retesting=False):
             site.status = str(response.status)
             html = await response.text()
             if (site.status == "200" and not "You are not authorized to access this db" in html):
-                print (site.url + "== *** Access Authorized ***")
+                print (site.url + " == *** Access Authorized ***")
                 print (html[:500])
             else:
-                print (site.url + "== Access Denied !")
+                print (site.url + " == Access Denied !")
     except asyncio.TimeoutError:
         pass
     except ValueError:
